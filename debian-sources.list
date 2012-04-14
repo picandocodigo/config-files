@@ -1,0 +1,27 @@
+deb http://mirrors.kernel.org/debian/ testing main contrib non-free
+deb http://mirrors.kernel.org/debian/ experimental main contrib non-free
+#deb http://mirrors.kernel.org/debian/ sid main contrib non-free
+
+deb http://security.debian.org/ testing/updates main
+deb-src http://security.debian.org/ testing/updates main
+deb http://www.debian-multimedia.org testing main
+
+#Google Chromium
+deb http://ppa.launchpad.net/chromium-daily/ppa/ubuntu jaunty main 
+deb-src http://ppa.launchpad.net/chromium-daily/ppa/ubuntu jaunty main
+
+#Opera Browser
+deb http://deb.opera.com/opera/ sid non-free
+
+# Google repository
+deb http://dl.google.com/linux/deb/ stable non-free
+
+# Google testing repository
+deb http://dl.google.com/linux/deb/ testing non-free
+
+#Icecat
+deb http://ppa.launchpad.net/gnuzilla-team/ppa/ubuntu karmic main 
+deb-src http://ppa.launchpad.net/gnuzilla-team/ppa/ubuntu karmic main 
+
+#Mozilla latest
+deb http://ppa.launchpad.net/ubuntu-mozilla-daily/ppa/ubuntu karmic main
