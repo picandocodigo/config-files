@@ -5,7 +5,7 @@
 #. ~/.archlogorc
 
 # Shell prompt
-export LS_OPTIONS='--color=auto -l'
+export LS_OPTIONS='--color=auto -lh'
 eval `dircolors`
 export GREP_OPTIONS='--color=auto'
 
@@ -17,6 +17,7 @@ alias be='bundle exec'
 
 PATH=$PATH:/var/lib/gems/1.9.1/bin
 PATH=$PATH:/usr/local/rvm/bin
+PATH=$PATH:~/.gem/ruby/1.9.1/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM
 
 # Git tab completion
