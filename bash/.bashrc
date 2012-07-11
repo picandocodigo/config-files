@@ -31,4 +31,5 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
 # Use EMACS
-export EDITOR=/usr/bin/emacs
+export EDITOR='/usr/bin/emacs -nw'
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
