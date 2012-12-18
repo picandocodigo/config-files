@@ -14,6 +14,9 @@ alias ls='ls $LS_OPTIONS'
 
 #Devel
 alias be='bundle exec'
+alias g='git'
+alias gs='git status'
+alias gl='git log'
 
 PATH=$PATH:/var/lib/gems/1.9.1/bin
 PATH=$PATH:/usr/local/rvm/bin
@@ -29,6 +32,11 @@ if [ -f /etc/bash_completion ]; then
 fi
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+
+# Specific per-machine bash stuff:
+if [ -f .bash_spec ]; then
+. .bash_spec
+fi
 
 # Use EMACS
 export EDITOR='/usr/bin/emacs -nw'
