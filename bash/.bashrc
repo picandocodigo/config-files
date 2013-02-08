@@ -10,7 +10,8 @@ eval `dircolors`
 export GREP_OPTIONS='--color=auto'
 
 #aliases
-alias ls='ls $LS_OPTIONS' 
+alias ls='ls $LS_OPTIONS'
+alias open='xdg-open'
 
 #Devel
 alias be='bundle exec'
