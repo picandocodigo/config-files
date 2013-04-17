@@ -18,6 +18,8 @@ alias be='bundle exec'
 alias g='git'
 alias gs='git status'
 alias gl='git log'
+alias rspec='rspec --format NyanCatFormatter'
+alias firefox-dev='firefox -P dev -no-remote </dev/null &>/dev/null &'
 
 PATH=$PATH:/var/lib/gems/1.9.1/bin
 PATH=$PATH:/usr/local/rvm/bin
