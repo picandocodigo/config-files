@@ -7,7 +7,6 @@
 # Shell prompt
 export LS_OPTIONS='--color=auto -lh'
 eval `dircolors`
-export GREP_OPTIONS='--color=auto'
 
 #aliases
 alias ls='ls $LS_OPTIONS'
@@ -18,13 +17,21 @@ alias be='bundle exec'
 alias g='git'
 alias gs='git status'
 alias gl='git log'
-alias rspec='rspec --format NyanCatFormatter'
+#alias rspec='rspec --format NyanCatFormatter'
 alias firefox-dev='firefox -P dev -no-remote </dev/null &>/dev/null &'
+alias search='grep -irn'
+alias uu='sudo apt-get update'
+alias ug='sudo apt-get dist-upgrade'
+alias uur='sudo apt-get autoremove'
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT1| grep -E "state|to\ full|percentage"'
+alias serve_dir='ruby -run -e httpd . -p 9090'
+alias hconsole='heroku local:run bundle exec rails console'
+alias hserver='heroku local:run bundle exec rails server'
+alias hspec='heroku local:run bundle exec rspec'
+alias fpc='fpc -Co -Cr -Mtp -gl'
 
-PATH=$PATH:/var/lib/gems/1.9.1/bin
-PATH=$PATH:/usr/local/rvm/bin
-PATH=$PATH:~/.gem/ruby/1.9.1/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM
+PATH=$PATH:~/workspace/picandocodigo/shell-scripting
+PATH=$PATH:~/downloads/elixir/bin
 
 # Git tab completion
 source ~/.git-completion.bash
@@ -34,7 +41,7 @@ if [ -f /etc/bash_completion ]; then
 . /etc/bash_completion
 fi
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+export PS1='\[\033[01;32m\]\u\[\033[01;34;10m\]@\[\033[01;36m\]\h\[\033[01;34m\] \w\[\033[01;33m\] `date +%H:%M:%S`\[\033[01;36m\]$(__git_ps1)\n\[\033[01;34m\]\$\[\033[00m\] '
 
 # Specific per-machine bash stuff:
 if [ -f .bash_spec ]; then
@@ -43,6 +50,7 @@ fi
 
 # Use EMACS
 export EDITOR='/usr/bin/emacs -nw'
+PATH=$PATH:/usr/local/rvm/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Extract
@@ -65,4 +73,9 @@ extract () {
      else
          echo "'$1' is not a valid file"
      fi
+}
+
+# Rails
+openlatestmigration() {
+    $EDITOR db/migrate/$(ls -tr db/migrate | tail -1)
 }
