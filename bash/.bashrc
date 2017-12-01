@@ -29,6 +29,8 @@ alias hconsole='heroku local:run bundle exec rails console'
 alias hserver='heroku local:run bundle exec rails server'
 alias hspec='heroku local:run bundle exec rspec'
 alias fpc='fpc -Co -Cr -Mtp -gl'
+alias e='emacsclient -n'
+alias nw='emacsclient -t'
 
 PATH=$PATH:~/workspace/picandocodigo/shell-scripting
 
@@ -41,7 +43,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-export PS1='\[\033[01;32m\]\u\[\033[01;34;10m\]@\[\033[01;36m\]\h\[\033[01;34m\] \e[38;5;137m💩\e[37m👻\[\033[01;34m\]\w\[\033[01;33m\] `date +%H:%M:%S`\[\033[01;36m\]$(__git_ps1)\n\[\033[01;34m\]\$\[\033[00m\] '
+export PS1='\[\033[01;32m\]\u\[\033[01;34;10m\]@\[\033[01;36m\]\h\[\033[01;34m\] \[\033[01;34m\]\w\[\033[01;33m\] `date +%H:%M:%S`\[\033[01;36m\]$(__git_ps1)\n\[\033[01;34m\]\$\[\033[00m\] '
 
 # Specific per-machine bash stuff:
 if [ -f .bash_spec ]; then
