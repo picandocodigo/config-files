@@ -31,6 +31,9 @@ alias hspec='heroku local:run bundle exec rspec'
 alias fpc='fpc -Co -Cr -Mtp -gl'
 alias e='emacsclient -n'
 alias nw='emacsclient -t'
+alias puma-dev='sudo /home/fernando/bin/puma-dev -sysbind'
+alias zork='frotz /home/fernando/games/zork/DATA/ZORK1.DAT'
+alias gosrc='cd /home/fernando/workspace/go/src/'
 
 PATH=$PATH:~/workspace/picandocodigo/shell-scripting
 
@@ -52,6 +55,22 @@ fi
 
 # Use EMACS
 export EDITOR='/usr/bin/emacs -nw'
+
+# FUNCTIONS
+# Search for a package's install/deinstall status
+dpkgsearch(){
+    dpkg --get-selections | grep $1
+}
+
+# Search apt for a package
+debsearch(){
+    apt-cache search $1
+}
+
+# Show a package's info
+debshow(){
+    apt-cache show $1
+}
 
 # Extract
 extract () {
@@ -83,3 +102,14 @@ openlatestmigration() {
 # ASDF - https://github.com/asdf-vm/asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# Command line Fuzzy finder - https://github.com/junegunn/fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Go
+export GOROOT="/usr/lib/go-1.10"
+export PATH="$PATH:$GOROOT/bin"
+export GOPATH="$HOME/workspace/go"
+export PATH="$PATH:/$HOME/workspace/go/bin"
+export PATH="$PATH:/$GOPATH/bin"
+export PATH="$PATH:$HOME/bin/kafka/bin"
