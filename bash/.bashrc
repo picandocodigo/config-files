@@ -18,6 +18,7 @@ alias g='git'
 alias gs='git status'
 alias gl='git log'
 #alias rspec='rspec --format NyanCatFormatter'
+alias grep='/bin/grep --color=auto'
 alias firefox-dev='firefox -P dev -no-remote </dev/null &>/dev/null &'
 alias search='grep -irn'
 alias uu='sudo apt-get update'
@@ -110,6 +111,9 @@ openlatestmigration() {
 export GOROOT="/usr/lib/go-1.10"
 export PATH="$PATH:$GOROOT/bin"
 export GOPATH="$HOME/workspace/go"
-export PATH="$PATH:/$HOME/workspace/go/bin"
-export PATH="$PATH:/$GOPATH/bin"
+export PATH="$PATH:$HOME/workspace/go/bin"
+export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/bin/kafka/bin"
+
+# For Spacemacs:
+export PATH=~/.local/bin:$PATH
