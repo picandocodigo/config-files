@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Firefox Nightly
+Exec=/home/fernando/bin/firefox/firefox
+StartupNotify=true
+Terminal=false
+Type=Application
+Icon=/home/fernando/bin/firefox/browser/chrome/icons/default/default128.png
