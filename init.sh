@@ -48,7 +48,7 @@ read -p "Do you want to install asdf-vm? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.2
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.4
     echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
     echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 fi
