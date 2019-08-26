@@ -10,6 +10,7 @@
 	committers = !git log --pretty=short --no-merges | git shortlog -nes
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	poop = !sh -c 'echo "git stash 💩💩💩" && git stash pop'
+	show-files = show --name-only
 [user]
 	email = fernando@picandocodigo.net
 	name = Fernando Briano
@@ -20,3 +21,10 @@
 [core]
 	excludesfile = /home/fernando/.gitignore
 	editor = emacsclient -t
+	excludefiles = /home/fernando/workspace/deliveroo/orderweb/.rubocop.yml
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[foo]
