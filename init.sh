@@ -10,6 +10,7 @@ function create_dotfile_symlink(){
     ln -s $file ~/.${file##*/}
 }
 
+# TODO: tmux dotfile has to be called .tmux.conf
 for file in ~/workspace/picandocodigo/config-files/dotfiles/*; do
     BASENAME=~/."$(basename -- $file)"
 
@@ -33,14 +34,13 @@ for file in ~/workspace/picandocodigo/config-files/desktop-entries/*; do
 done
 
 # packages to install:
-# TODO: Ask if you want to install them
 echo
 read -p "Do you want to install common packages? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "Installing common packages:"
-    sudo apt-get install git tmux emacs
+    sudo apt-get install git tmux emacs curl gimp
 fi
 
 # ASDF
@@ -71,4 +71,7 @@ then
     sudo fc-cache -f -v
 fi
 
-
+# Postgres
+# sudo echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >> /etc/apt/sources.list.d/pgdg.list
+# wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+# sudo apt-get update
