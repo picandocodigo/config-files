@@ -6,21 +6,30 @@ function create_dotfile_symlink(){
     origin=$1
     copy=$2
 
-    echo "Creating symlink for $origin in $copy"
-    ln -s $file ~/.${file##*/}
+    echo "Creating symlink for:"
+    echo "$origin in $copy"
+
+    if [[ $file == *"tmux"* ]]; then
+        ln -s $file ~/.tmux.conf
+    else
+        ln -s $file ~/.${file##*/}
+    fi
 }
 
 # TODO: tmux dotfile has to be called .tmux.conf
 for file in ~/workspace/picandocodigo/config-files/dotfiles/*; do
     BASENAME=~/."$(basename -- $file)"
-
-    if [ -L ${BASENAME} ]; then
+    if [ -f "$BASENAME" ]; then
         echo
         echo "File $BASENAME already exists"
         read -p "Press r to overwrite, anything else to skip `echo $'\n '`" -n 1 -r
         if [[ $REPLY =~ ^[r]$ ]]
         then
-            create_dotfile_symlink $file
+            echo
+            mv $BASENAME ${BASENAME}.backup
+            create_dotfile_symlink $file $BASENAME
+        else
+            continue
         fi
     else
         create_dotfile_symlink $file $BASENAME
