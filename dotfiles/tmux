@@ -20,6 +20,9 @@ setw -g pane-base-index 1
 # Don't let tmux rename windows based on their content
 set -g allow-rename off
 
+# Increase history limit
+set -g history-limit 5000
+
 ########
 
 
