@@ -12,6 +12,7 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	poop = !sh -c 'echo "git stash 💩💩💩" && git stash pop'
 	show-files = show --name-only
+  drop-last-commit = reset --hard HEAD^
 [user]
 	email = fernando@picandocodigo.net
 	name = Fernando Briano
