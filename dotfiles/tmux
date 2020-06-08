@@ -21,7 +21,7 @@ setw -g pane-base-index 1
 set -g allow-rename off
 
 # Increase history limit
-set -g history-limit 5000
+set -g history-limit 50000
 
 ########
 
