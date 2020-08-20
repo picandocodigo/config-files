@@ -25,7 +25,6 @@
 [core]
 	excludesfile = /home/fernando/.gitignore
 	editor = emacsclient -t
-	excludefiles = /home/fernando/workspace/deliveroo/orderweb/.rubocop.yml
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
