@@ -13,6 +13,8 @@
 	poop = !sh -c 'echo "git stash 💩💩💩" && git stash pop'
 	show-files = show --name-only
   drop-last-commit = reset --hard HEAD^
+  rc = recent 10
+  cleanup-branches = remote update origin --prune
 [user]
 	email = fernando@picandocodigo.net
 	name = Fernando Briano
