@@ -40,6 +40,9 @@ bind - split-window -v
 # PREFIX + = promote pane to window
 bind + break-pane
 
+# PREFIX + T = move window to top
+bind T swap-window -t 1
+
 # PREFIX h,j,k,l = move between panes
 bind h select-pane -L
 bind j select-pane -D
