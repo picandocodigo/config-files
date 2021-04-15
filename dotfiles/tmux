@@ -104,3 +104,6 @@ setw -g window-status-activity-style fg=cyan,bg=black
 
 # enable mouse
 setw -g mouse on
+
+# renumber windows
+set-option -g renumber-windows on
