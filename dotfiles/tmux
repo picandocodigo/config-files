@@ -92,7 +92,7 @@ set -g message-style fg=white,bg=black
 set -g status-left "#[fg=green][#S] "
 set -g status-left-length 40
 set -g status-justify centre
-set -g status-right "#[fg=cyan]%d %b %R"
+set -g status-right "🦖 🌋 🦕"
 
 # Update the status line every thirty seconds (default to 15 seconds if this is commented out)
 # set -g status-interval 30
