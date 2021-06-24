@@ -49,7 +49,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "Installing common packages:"
-    sudo apt-get install git tmux emacs curl gimpc olordiff peek vlc
+    sudo apt-get install git tmux emacs curl gimpc olordiff peek vlc silversearcher-ag
 fi
 
 # ASDF
