@@ -49,7 +49,19 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "Installing common packages:"
-    sudo apt-get install git tmux emacs curl gimp colordiff peek vlc silversearcher-ag
+    sudo apt-get install git tmux curl gimp colordiff peek vlc silversearcher-ag
+fi
+
+echo
+read -p "Install emacs from kelleyk/emacs PPA? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "Installing Emacs PPA"
+    sudo add-apt-repository ppa:kelleyk/emacs
+    sudo apt-get update
+    apt-cache search emacs | grep ^emacs
+    echo "Now install one of the emacs packages"
 fi
 
 # ASDF
