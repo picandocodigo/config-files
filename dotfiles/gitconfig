@@ -20,6 +20,16 @@
 	name = Fernando Briano
 [color]
 	ui = true
+[color "diff"]
+  plain = 194
+  old = 197
+  new = 46
+  meta = 195
+[color "status"]
+  header = 194
+  changed = 197
+  branch = 191 bold
+  added = 46
 [push]
 	default = simple
 [core]
