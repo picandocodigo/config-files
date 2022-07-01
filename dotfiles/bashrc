@@ -166,7 +166,7 @@ export PATH="$PATH:$HOME/workspace/go/bin"
 export PATH="$PATH:$GOPATH/bin"
 
 # For Spacemacs:
-export PATH=~/.local/bin:$PATH
+export PATH=$PATH:~/.local/bin
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
