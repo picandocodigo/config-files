@@ -27,9 +27,10 @@
   meta = 195
 [color "status"]
   header = 194
-  changed = 197
+  changed = 198
   branch = 191 bold
   added = 46
+  untracked = 197
 [push]
 	default = simple
 [core]
