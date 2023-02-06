@@ -144,7 +144,8 @@ if [ -f ~/.bash_functions ]; then
 fi
 
 # Use EMACS
-export EDITOR='/usr/bin/emacs -nw'
+export EDITOR='emacsclient -a -e "(new-frame)"'
+export GIT_EDITOR='emacsclient -d $DISPLAY -c'
 
 if [ -d ~/.asdf ]; then
     # ASDF - https://github.com/asdf-vm/asdf
