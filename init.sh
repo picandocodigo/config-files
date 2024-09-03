@@ -53,12 +53,12 @@ then
 fi
 
 echo
-read -p "Install emacs from kelleyk/emacs PPA? " -n 1 -r
+read -p "Install emacs from ubuntuhandbook1 PPA? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "Installing Emacs PPA"
-    sudo add-apt-repository ppa:kelleyk/emacs
+    sudo add-apt-repository ppa:ubuntuhandbook1/emacs
     sudo apt-get update
     apt-cache search emacs | grep ^emacs
     echo "Now install one of the emacs packages"
