@@ -33,6 +33,7 @@
   untracked = 197
 [push]
 	default = simple
+	autoSetupRemote = true
 [core]
 	excludesfile = /home/fernando/.gitignore
 	editor = emacsclient -t
