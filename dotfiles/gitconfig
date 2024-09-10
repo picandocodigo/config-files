@@ -10,6 +10,7 @@
 	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
 	committers = !git log --pretty=short --no-merges | git shortlog -nes
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lgf = log --name-only
 	poop = !sh -c 'echo "git stash 💩💩💩" && git stash pop'
 	show-files = show --name-only
 	drop-last-commit = reset --hard HEAD^
